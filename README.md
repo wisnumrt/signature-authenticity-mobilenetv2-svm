@@ -1,8 +1,4 @@
-# signature-authenticity-mobilenetv2-svm
-Deteksi keaslian tanda tangan (asli vs palsu) dengan ekstraksi fitur MobileNetV2 dan klasifikasi SVM
-
 # SIGNATURE AUTHENTICITY DETECTION USING MOBILENETV2 FEATURE EXTRACTION AND SVM
-
 Tugas UAS Pengenalan Pola (UAS-C081)
 
 ## Tim
@@ -19,24 +15,15 @@ Sistem klasifikasi biner (asli / palsu) pada citra tanda tangan. MobileNetV2 (pr
 Pengumpulan data → Preprocessing → Ekstraksi fitur MobileNetV2 → Klasifikasi SVM → Evaluasi
 
 ## Hasil (data uji, 339 citra)
-| Kelas | Precision | Recall | F1 |
-|---|---|---|---|
-| Asli | 0,98 | 0,69 | 0,81 |
-| Palsu | 0,71 | 0,99 | 0,82 |
+Akurasi SVM pada data uji: **82%**
 
-Akurasi 82%. Confusion matrix: `[[131, 60], [2, 146]]`.
-Model sangat sensitif terhadap tanda tangan palsu, tetapi masih sering
-salah menandai tanda tangan asli sebagai palsu (60 kasus).
+### Classification Report
+![Classification Report](results/classification_report.png)
 
-## Cara menjalankan
-1. Buka notebook di Google Colab.
-2. Siapkan dataset (lihat `data/README.md`) dan sesuaikan `data_dir`.
-3. Jalankan seluruh sel secara berurutan.
+### Confusion Matrix
+![Confusion Matrix](results/confusion_matrix_svm.png)
 
-## Library
-tensorflow, scikit-learn, numpy, pandas, matplotlib, seaborn
+Model sangat sensitif terhadap tanda tangan palsu (recall 0,99), tetapi 60 tanda tangan asli masih salah terdeteksi sebagai palsu.
 
 ## Link
 - [Notebook Colab](https://colab.research.google.com/drive/116eSCJuSgHnyDOMlW5AMlfv7DmV7dlms?usp=sharing)
-- Laporan: `docs/Laporan_Akhir.pdf`
-- PPT dan video presentasi: (isi dari lampiran laporan)
