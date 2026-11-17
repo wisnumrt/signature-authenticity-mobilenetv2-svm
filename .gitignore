@@ -221,3 +221,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dataset & fitur (terlalu besar, bisa dibuat ulang)
+*.npy
+data/Dataset/
