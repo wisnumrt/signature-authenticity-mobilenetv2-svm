@@ -1,0 +1,21 @@
+DATASET TANDA TANGAN (ASLI & PALSU)
+
+Sumber  : Kaggle
+Link    : https://www.kaggle.com/datasets/robinreni/signature-verification-dataset
+Jumlah  : 1.649 citra (887 asli, 762 palsu), 64 ID penanda tangan
+
+Struktur folder yang dipakai di notebook:
+
+Dataset/
+├── asli/
+│   ├── 001/        (gambar tanda tangan asli milik ID 001)
+│   └── ...
+└── palsu/
+    ├── 001_forg/   (gambar tanda tangan palsu untuk ID 001)
+    └── ...
+
+Cara pakai:
+1. Unduh dataset dari link di atas.
+2. Susun foldernya seperti struktur di atas.
+3. Upload ke Google Drive (contoh: MyDrive/Dataset).
+4. Sesuaikan variabel data_dir di notebook.
